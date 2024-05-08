@@ -13,3 +13,6 @@
 6. [Kiểu số nguyên](php-types/integer.md)
 7. [Kiểu số thực](php-types/float.md)
 8. [Kiểu chuỗi](php-types/string.md)
+9. [Kiểu null](php-types/null.md)
+10. [Chuyển đổi kiểu](php-types/type-casting.md)
+
