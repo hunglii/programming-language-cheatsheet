@@ -1,10 +1,8 @@
-# PHP Cheatsheet
+# Cú pháp PHP
 
-## Cú pháp
+## Xác định khối mã PHP
 
-### Xác định khối mã PHP
-
-**Cách xác định khối mã PHP trong tài liệu HTML**
+### Cách xác định khối mã PHP trong tài liệu HTML
 
 ```php
 <!DOCTYPE html>
@@ -19,7 +17,7 @@
 </html>
 ```
 
-**Cách xác định khối mã PHP trong tập tin**
+### Cách xác định khối mã PHP trong tập tin
 
 Có thể bỏ qua thẻ đóng PHP: `?>`
 
@@ -28,14 +26,16 @@ Có thể bỏ qua thẻ đóng PHP: `?>`
 echo 'PHP trong tệp';
 ```
 
-### Phân biệt chữ hoa, chữ thường
+## Phân biệt chữ hoa, chữ thường
 
-PHP phân biệt chữ hoa, chữ thường đối với:
+PHP không phân biệt chữ hoa, chữ thường đối với:
 - Các cấu trúc như `if`, `if-else`, `if-elseif`, `switch`, `while`, `do-while`...
 - Các từ khóa như `true` và `false`.
 - Tên các hàm do người dùng định nghĩa và tên các lớp.
 
-### Câu lệnh
+PHP phân biệt chữ hoa, chữ thường đối với tên biến, chẳng hạn `$message` và `$MESSAGE` là hai biến khác nhau.
+
+## Câu lệnh
 
 Một chương trình (kịch bản) PHP bao gồm một hoặc nhiều câu lệnh. Một câu lệnh là một đoạn mã thực hiện một công việc gì đó.
 
@@ -59,7 +59,7 @@ if ($is_new_user) {
 }
 ```
 
-### Khoảng trắng và xuống dòng
+## Khoảng trắng và xuống dòng
 
 Trong hầu hết trường hợp, các khoảng trắng (tạo ra khi bấm phím cách hoặc Tab) và xuống dòng (tạo ra khi bấm phím Enter) bị trình biên dịch bỏ qua. Do đó bạn có thể thêm các khoảng trắng hoặc xuống dòng để đoạn mã trông đẹp mắt và dễ đọc hơn.
 
@@ -70,3 +70,21 @@ login(
 );
 ```
 
+## Chú thích
+
+### Chú thích một dòng
+
+```php
+// chú thích một dòng bắt đầu bằng "//"
+# chú thích một dòng bắt đầu bằng "#"
+```
+
+### Chú thích nhiều dòng
+
+```php
+/*
+    Đây là chú thích nhiều dòng,
+    các dòng chú thích nằm giữa
+    /* và */
+*/
+```
