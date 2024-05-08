@@ -2,47 +2,71 @@
 
 ## Cú pháp
 
-### Thẻ bắt đầu/kết thúc mã PHP
+### Xác định khối mã PHP
+
+**Cách xác định khối mã PHP trong tài liệu HTML**
+
+```php
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8">
+    <title>Chèn PHP vào HTML</title>
+</head>
+<body>
+    <h1><?php echo 'PHP trong HTML'; ?></h1>
+</body>
+</html>
+```
+
+**Cách xác định khối mã PHP trong tập tin**
+
+Có thể bỏ qua thẻ đóng PHP: `?>`
 
 ```php
 <?php
-    // các lệnh PHP ở đây
-?>
+echo 'PHP trong tệp';
 ```
-
-### Câu lệnh
-
-Các câu lệnh được kết thúc bởi dấu chấm phảy.
 
 ### Phân biệt chữ hoa, chữ thường
 
-Đối với các từ khóa, tên các hàm, các lớp do người dùng tạo, PHP không phân biệt chữ hoa, chữ thường.
+PHP phân biệt chữ hoa, chữ thường đối với:
+- Các cấu trúc như `if`, `if-else`, `if-elseif`, `switch`, `while`, `do-while`...
+- Các từ khóa như `true` và `false`.
+- Tên các hàm do người dùng định nghĩa và tên các lớp.
 
-Đối với tên biến, PHP có phân biệt chữ hoa, chữ thường.
+### Câu lệnh
 
-### Chú thích
+Một chương trình (kịch bản) PHP bao gồm một hoặc nhiều câu lệnh. Một câu lệnh là một đoạn mã thực hiện một công việc gì đó.
 
-**Chú thích một dòng**
-
-```php
-<?php
-    # chú thích một dòng bắt đầu bằng dấu #
-    // chú thích một dòng cũng có thể bắt đầu bằng //
-    echo 'Chào thế giới';
-?>
-```
-
-**Chú thích nhiều dòng**
+Một câu lệnh đơn luôn kết thúc với một dấu chấm phảy (`;`):
 
 ```php
-<?php
-    /* Đây là một ví dụ về chú thích nhiều dòng,
-    một chương trình cộng hai số.
-    Biến $x là số đầu tiên, biến $y là số thứ hai
-    */
-
-    $x = 10;
-    $y = 20;
-    print "Tổng = " . $x + $y;
-?>
+$message = "Hello";
 ```
+
+Tuy nhiên, câu lệnh đơn đứng ngay trước thẻ đóng PHP `?>` thì không cần kết thúc bằng dấu chấm phảy:
+
+```php
+<?php echo $name ?>
+```
+
+Một câu lệnh phúc tạp bao gồm một hoặc nhiều câu lệnh đơn đặt trong cặp dấu ngoặc `{` và `}`. Bạn không cần đặt dấu chấm phảy sau `}`:
+
+```php
+if ($is_new_user) {
+    send_welcome_email();
+}
+```
+
+### Khoảng trắng và xuống dòng
+
+Trong hầu hết trường hợp, các khoảng trắng (tạo ra khi bấm phím cách hoặc Tab) và xuống dòng (tạo ra khi bấm phím Enter) bị trình biên dịch bỏ qua. Do đó bạn có thể thêm các khoảng trắng hoặc xuống dòng để đoạn mã trông đẹp mắt và dễ đọc hơn.
+
+```php
+login(
+    $username,
+    $password
+);
+```
+
